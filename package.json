@@ -14,6 +14,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@analogjs/router": "^0.1.0-alpha.0",
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",

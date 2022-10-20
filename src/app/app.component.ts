@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLinkWithHref as Link, RouterOutlet as Outlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [Outlet, Link],
   template: `
     <div>
       <a href="https://vitejs.dev" target="_blank">
@@ -19,20 +21,13 @@ import { Component } from '@angular/core';
 
     <h1>Vite + Angular</h1>
 
-    <div class="card">
-      <button type="button" (click)="increment()">Count {{ count }}</button>
-    </div>
+    <a routerLink="/">Home</a> |
+    <a routerLink="/about">About</a> |
+    <a routerLink="/items">Items</a> |
+    <a routerLink="/products/123">Products</a> |
+    <a routerLink="/bad">Bad</a>
 
-    <p>
-      Check out
-      <a href="https://github.com/analogjs/analog#readme" target="_blank"
-        >Analog</a
-      >, the fullstack meta-framework for Angular powered by Vite!
-    </p>
-
-    <p class="read-the-docs">
-      Click on the Vite and Angular logos to learn more.
-    </p>
+    <router-outlet></router-outlet>
   `,
   styles: [
     `
